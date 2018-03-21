@@ -63,11 +63,11 @@ namespace boost {
       }
 #endif
 
-      static BOOST_CONSTEXPR size_t bit_capacity() {
+      static size_t bit_capacity() {
         return Size;
       }
 
-      static BOOST_CONSTEXPR size_t num_hash_functions() {
+      static size_t num_hash_functions() {
         return mpl::size<HashFunctions>::value;
       };
 

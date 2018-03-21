@@ -116,17 +116,17 @@ namespace boost {
 	return this->_num_bins;
       }
 
-      static BOOST_CONSTEXPR size_t bits_per_bin()
+      static size_t bits_per_bin()
       {
 	return BitsPerBin;
       }
 
-      static BOOST_CONSTEXPR size_t bins_per_slot()
+      static size_t bins_per_slot()
       {
 	return sizeof(block_type) * 8 / BitsPerBin;
       }
 
-      static BOOST_CONSTEXPR size_t mask()
+      static size_t mask()
       {
 	return static_cast<Block>(0 - 1) >> (sizeof(Block) * 8 - BitsPerBin);
       }
@@ -136,7 +136,7 @@ namespace boost {
         return this->num_bins() * BitsPerBin;
       }
 
-      static BOOST_CONSTEXPR size_t num_hash_functions() 
+      static size_t num_hash_functions() 
       {
         return mpl::size<HashFunctions>::value;
       }
